@@ -26,13 +26,14 @@ Resize-Partition -DriveLetter C -Size 100GB
 UWF adalah fitur Windows yang melindungi drive dengan mengalihkan semua perubahan penulisan ke overlay sementara, sehingga saat reboot sistem kembali ke kondisi awal. Cocok untuk perangkat embedded atau sistem kiosk.
 
 Menggunakan uwfmgr untuk mengelola UWF
+```powershell
 a. Cek status UWF (Menampilkan konfigurasi dan status UWF): uwfmgr get-config
 b. Aktifkan filter pada drive C: uwfmgr filter enable
 c. Nonaktifkan filter: uwfmgr filter disable
 d. Menambahkan pengecualian folder/file agar tidak tertutup UWF: uwfmgr volume set-exclusion C:\Data /add
 Memastikan folder C:\Data tetap bisa diubah secara permanen.
 e. Menghapus pengecualian: uwfmgr volume set-exclusion C:\Data /remove
-
+```
 Reboot diperlukan setelah mengaktifkan atau menonaktifkan filter agar perubahan berlaku.
 
 Contoh penggunaan
