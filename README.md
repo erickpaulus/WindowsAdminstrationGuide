@@ -16,6 +16,7 @@ Contoh: Setting izin menggunakan GUI atau perintah icacls.
 
 3. Disk and Storage Management
 - Mengelola partisi dan volume
+
 Contoh:
 
 ```powershell
@@ -50,13 +51,10 @@ Reboot sistem:
 shutdown /r /t 0
 ```
 
-```powershell
-uwfmgr filter enable
-uwfmgr get-config
-```
 
 4. Task Scheduling
 - Membuat dan mengelola Scheduled Tasks
+
 Contoh:
 ```powershell
 schtasks /Create /TN "BackupTask" /TR "backup.ps1" /SC DAILY /ST 06:00 /RL HIGHEST
@@ -65,6 +63,7 @@ schtasks /Create /TN "BackupTask" /TR "backup.ps1" /SC DAILY /ST 06:00 /RL HIGHE
 
 5. Service Management
 - Memulai, menghentikan, dan mengatur service
+
 Contoh:
 ```powershell
 Get-Service -Name "Spooler"
@@ -77,6 +76,7 @@ Set-Service -Name "Spooler" -StartupType Automatic
 - Mengatur Windows Defender
 - Konfigurasi Windows Update otomatis
 - Manajemen firewall
+
 Contoh:
 ```powershell
 New-NetFirewallRule -DisplayName "Allow HTTP" -Direction Inbound -LocalPort 80 -Protocol TCP -Action Allow
@@ -85,10 +85,12 @@ New-NetFirewallRule -DisplayName "Allow HTTP" -Direction Inbound -LocalPort 80 -
 7. Backup and Recovery
 - Membuat backup dengan Task Scheduler dan PowerShell
 - Restore data dan konfigurasi
+
 Contoh: Panduan singkat membuat task backup otomatis.
 
 8. Monitoring and Logging
 - Melihat Event Logs
+
 Contoh:
 ```powershell
 Get-EventLog -LogName System -Newest 50
